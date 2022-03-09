@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    // // Viết chương trình tính giá điện.
+    // let chudien = parseFloat('Nhập số chữ điện tiêu thụ');
+    // let gia1 = 1678;
+    // let gia2 = 1734;
+    // let gia3 = 2014;
+    // let gia4 = 2536;
+    // let gia5 = 2834;
+    // let gia6 = 2927;
+    // if(chudien < 50){
+    //     alert('Số tiền phải trả là' + chudien*gia1);
+    // }else if(chudien >= 51 && chudien < 100){
+    //     alert('Số tiền phải trả là' + chudien*gia2);
+    // }else if(chudien >= 101 && chudien < 200){
+    //     alert('Số tiền phải trả là' + chudien*gia3);
+    // }else if(chudien >= 201 && chudien < 300){
+    //     alert('Số tiền phải trả là' + chudien*gia3);
+    // }else if(chudien >= 301 && chudien < 400){
+    //     alert('Số tiền phải trả là' + chudien*gia4);
+    // }else if(chudien)
+
+    let chutien = parseFloat(prompt('Nhập số chữ điện tiêu thụ'));
+    switch (true) {
+        case chutien < 50:
+            alert('Số tiền phải trả là: ' + chutien*1678 + 'đ');
+            break;
+        case chutien < 100 && chutien >=51:
+            alert('Số tiền phải trả là: ' + chutien*1734 + 'đ');
+            break;
+        case chutien < 200 && chutien >=101 :
+            alert('Số tiền phải trả là: ' + chutien*2014 + 'đ');
+            break;
+        case chutien < 300 && chutien >=201:
+            alert('Số tiền phải trả là: ' + chutien*2536 + 'đ');
+            break;
+        case chutien < 400 && chutien >=301:
+            alert('Số tiền phải trả là: ' + chutien*2834 + 'đ');
+            break;
+        default:
+            alert('Số tiền phải trả là: ' + chutien*2927 + 'đ');
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <span>Nhập cân nặng (kg)</span>
+    <input id="weightinput" type="text">
+    <br>
+    <span>Nhập chiều cao (m)</span>
+    <input id="heightinput" type="text">
+    <button onclick="tinhbmi()">Tính BMI</button>
+    <script>
+        function tinhbmi() {
+            let weight = parseFloat(document.getElementById('weightinput').value);
+            let height = parseFloat(document.getElementById('heightinput').value);
+            let bmi = weight / (height*height);
+            if(bmi < 18.5){
+                document.write('Underweight');
+            } else if(bmi >= 18.5 && bmi < 25){
+                document.write('Normal');
+            } else if(bmi >= 25 && bmi < 30){
+                document.write('Overweight');
+            } else {
+                document.write('Obese');
+            }
+        }
+    </script>
+</body>
+</html>
