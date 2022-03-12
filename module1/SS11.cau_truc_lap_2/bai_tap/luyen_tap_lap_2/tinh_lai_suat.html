@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    // tính lãi suất
+
+
+    let tienVay = parseInt(prompt('Nhập số tiền cần vay (triệu đ)'));
+    let laiSuat = parseInt(prompt('Nhập lãi suất'));
+    let thang = parseInt(prompt('Nhập số tháng'));
+    let tienLai = tienVay * laiSuat/100;
+    let k = tienLai;
+    for (i = 1; i <= thang; i ++){
+        k += k ;
+    }
+    console.log('Số tiền lãi phải trả là:' + Math.floor(k) + 'triệu đ');
+
+</script>
+</body>
+</html>
