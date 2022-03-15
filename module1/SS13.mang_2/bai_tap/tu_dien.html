@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<p>Từ điển Anh - Việt</p>
+<input type="text" placeholder="Nhập từ cần tìm" id="search">
+<input type="submit" id="submit" onclick="check()" value="Search">
+<script>
+    function check() {
+        let str1 = ['Mon', 'Tue', 'Web', 'Thur'];
+        let str2 = ['Thứ 2', 'Thứ 3', 'Thứ 4', 'Thứ 5'];
+        let input = document.getElementById("search").value;
+        for (let i = 0; i < str1.length; i++) {
+            if (input === str1[i]) {
+                alert(str2[i]);
+                break;
+            } else if (i === (str1.length - 1)) {
+                alert('Không tìm ra từ');
+            }
+        }
+    }
+
+</script>
+</body>
+</html>

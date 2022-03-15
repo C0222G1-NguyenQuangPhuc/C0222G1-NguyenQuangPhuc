@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    // Viết một chương trình để in các ký tự trong một mảng theo thứ tự đảo ngược.
+    // Ví dụ, nếu một mảng chứa các ký tự  [ 'c', 's', 'c', '2', '6', '1' ] sau khi thực hiện đảo ngược sẽ là "162csc"
+
+    let  a = [ 'c', 's', 'c', '2', '6', '1' ];
+
+    // for (var i in a)
+    // {
+    //     console.log("row " + i);
+    //     for (var j in a[i])
+    //     {
+    //         console.log(" " + a[i][j]);
+    //     }
+    // }
+    // let b = a.reverse()
+    // let c = b.join("")
+    //console.log(b)
+    let min=0
+    let max = a.length -1;
+    while (min<max){
+        let z = a[min];
+        a[min] = a[max];
+        a[max] = z;
+        min++;
+        max--;
+    }
+    let c = a.join("")
+    console.log(c);
+</script>
+</body>
+</html>
