@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    // Bài 3: Viết hàm tính giai thừa của một số nguyên bất kỳ được đưa vào. Gọi hàm vừa xây dựng được.
+
+    function factorial(n) {
+        let result = 1
+        for (let i = 1; i < n; i++) {
+             result *= n;
+        }
+        return result;
+    }
+
+    let num;
+    do{
+        num = prompt('Input a number');
+        if (!isNaN(Number(num)) && Number(num) > 0 && Number.isInteger(parseFloat(num))){
+            num = parseInt(num);
+            alert(num);
+            break;
+        }
+    }while (true);
+    document.write('Num! = ' + factorial(num));
+</script>
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    // Bài 9: Viết hàm truyền vào một mảng ký tự, và một ký tự bất kỳ, kiểm tra xem ký tự bất kỳ đó có nằm trong mảng không.
+    //     Nếu có trả về số lần xuất hiện của ký tự đó, nếu không trả về -1.
+
+    function find(arg,sym) {
+        let count = 0;
+        for (let i = 0; i < arg.length ; i++) {
+            if (sym === arg[i]){
+                count++;
+            }
+        }if (count > 0){
+            return count;
+        }else return -1;
+    }
+
+    let string = "Death is like the wind, always by my side";
+    let arr = string.split('');
+    alert(arr);
+    let str = 'e';
+    document.write('So lan xuat hien la ' + find(arr,str));
+</script>
+</body>
+</html>

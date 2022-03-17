@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    // Bài 2: Viết hàm tính diện tích, hàm tính chu vi hình tròn. Gọi hàm vừa xây dựng được
+
+    function perimeterOfACircle(r) {
+        const pi = 3.14;
+        let perimeter = r * 2 * pi;
+        return perimeter;
+    }
+
+    function areaOfACircle(r){
+        const pi = 3.14;
+        let area = r * r * pi;
+        return area;
+    }
+    let num;
+    do{
+        num = prompt('Input a number');
+        if (!isNaN(Number(num)) && Number(num) > 0 && Number.isInteger(parseFloat(num))){
+            num = parseInt(num);
+            alert(num);
+            break;
+        }
+    }while (true);
+    document.write('Perimeter = ' + perimeterOfACircle(num) + '<br>');
+    document.write('Area = ' + areaOfACircle(num));
+
+</script>
+</body>
+</html>
