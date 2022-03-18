@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function temperature(c) {
+        this.fahrenheit = function () {
+            return 9 * c / 5 + 32;
+        }
+        this.kelvin = function () {
+            return c + 275.15;
+        }
+    }
+
+    let tem = parseInt(prompt('Input C (> - 273 0C)'));
+    let show = new temperature(tem);
+    document.write("Fahrenheit: " + show.fahrenheit() + ' F' + '<br>');
+    document.write("Kelvin: " + show.kelvin() + ' K');
+
+</script>
+</body>
+</html>

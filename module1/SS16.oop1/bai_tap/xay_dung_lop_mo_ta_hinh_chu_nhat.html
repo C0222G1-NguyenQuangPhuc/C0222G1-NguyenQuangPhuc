@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<canvas id="myCanvas" width="368px" height="68px" style="border: 1px solid #d3d3d3"></canvas>
+<script>
+    function Rectangle(width, height) {
+        this.perameter = function () {
+            return (width + height) * 2;
+        }
+        this.area = function () {
+            return width*height;
+        }
+    }
+    let width = parseInt(prompt("Enter Width"));
+    let height = parseInt(prompt("Enter eight"));
+    let show = new Rectangle(width,height);
+    document.write("dien tich"+show.area())+"<br>";
+    document.write("chu vi"+show.perameter())+"<br>";
+    let ctx = document.getElementById("myCanvas").getContext("2d");
+    ctx.fillStyle = "#ff0000";
+    ctx.fillRect(0,0,width,height);
+</script>
+</body>
+</html>
