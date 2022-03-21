@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    // Game đoán số
+
+
+    let firstNum = parseInt(prompt('Nhập số bắt đầu'));
+    let lastNum = parseInt(prompt('Nhập số kết thúc'));
+    let i = 1;
+    let autoNum = Math.floor(Math.random() * (lastNum - firstNum)) + firstNum;
+    console.log(autoNum);
+    let choice = null;
+    do{
+       choice = parseInt(prompt('Nhập số bạn muốn đoán'));
+       if(choice < autoNum){
+           alert('Số bạn nhập đang nhỏ hơn');
+       }else if (choice > autoNum) {
+           alert('Số bạn nhập đang lớn hơn');
+       }else{
+           alert('Chúc mừng bạn đã đoán đúng');
+           break;
+       }
+       i++;
+    }while (i <= 3 && choice != autoNum);
+
+</script>
+</body>
+</html>

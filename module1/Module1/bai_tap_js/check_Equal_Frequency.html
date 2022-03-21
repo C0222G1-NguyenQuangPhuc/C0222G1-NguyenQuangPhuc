@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let arr  = [1,2,4,2,1,5,4,5];
+    let count = 0;
+
+    function solution(arg) {
+        for (let i = 0; i < arg.length; i++){
+            for (let j = 0; j < arg.length; j++){
+                if (arg[i] == arg[j]){
+                    count++;
+                }
+            }
+        }
+        if (count % arg.length == 0){
+            return true;
+        }else{
+            return false;
+        }
+    }
+    solution(arr);
+    alert(count);
+    alert(solution(arr));
+</script>
+</body>
+</html>

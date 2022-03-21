@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    // function temperature(c) {
+    //     this.fahrenheit = function () {
+    //         return 9 * c / 5 + 32;
+    //     }
+    //     this.kelvin = function () {
+    //         return c + 275.15;
+    //     }
+    // }
+    //
+    // let tem = parseInt(prompt('Input C (> - 273 0C)'));
+    // let show = new temperature(tem);
+    // document.write("Fahrenheit: " + show.fahrenheit() + ' F' + '<br>');
+    // document.write("Kelvin: " + show.kelvin() + ' K');
+
+
+    class Temperature{
+        constructor(celcius) {
+            this.celsius = celcius;
+        }
+
+        toFahrenheit(){
+            let f = 9 * this.celsius / 5 + 32;
+            console.log(f + ' F ');
+        }
+
+        toKelvin(){
+            let k = this.celsius + 275.15;
+            console.log(k + ' K ');
+        }
+    }
+
+    let tem = new Temperature(38);
+    tem.toFahrenheit();
+    tem.toKelvin();
+
+</script>
+</body>
+</html>

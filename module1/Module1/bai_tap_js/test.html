@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+        <script>
+                let number = parseInt(prompt("nhap so phan tu trong day fibonancy"));
+                let n1 =0;let n2= 1;
+                let tong;
+                for (i = 1 ; i<=number;i++)
+                {
+                    document.write(n1,"\n");
+
+                    tong = n1 + n2;
+                    n1 = n2;
+                    n2 = tong;
+                    if (tong % 5 ==0)
+                    {
+                        console.log("so chia het cho 5 la:"+tong);
+
+                    }
+
+                }
+
+
+
+        </script>
+</body>
+</html>

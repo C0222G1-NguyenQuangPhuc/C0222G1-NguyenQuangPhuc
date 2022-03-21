@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    class Apple{
+        constructor() {
+            this.weight = 10;
+        }
+    }
+
+    class Human{
+        constructor(name,gender,weight) {
+            this.name = name;
+            this.gender = gender;
+            this.weight = weight;
+        }
+
+        speak(word){
+            console.log(this.name + ' is saying ' + word);
+        }
+
+        check(appleObj){
+            if (appleObj.weight > 0){
+                console.log('Tao nay co the an dc');
+                return true;
+            }else{
+                console.log('Khong con gi de an');
+                return false;
+            }
+        }
+
+        eat(appleObj){
+            if (this.check(appleObj)){
+                console.log(this.name + ' dang an tao');
+                this.weight++;
+                appleObj.weight--;
+                console.log(this.name + ' khoi luong da tang ' + this.weight);
+            }
+        }
+    }
+
+    let apple = new Apple();
+    let adam = new Human("Adam",'Male',70);
+    let eva = new Human('Eva','Female',50);
+    adam.speak('Bring the heat');
+    adam.check(apple);
+    adam.eat(apple);
+    console.log('Khoi luong tao con ' + apple.weight);
+    eva.speak('Its GAM time' );
+    eva.check(apple);
+    eva.eat(apple);
+    console.log('Khoi luong tao con ' + apple.weight);
+</script>
+</body>
+</html>

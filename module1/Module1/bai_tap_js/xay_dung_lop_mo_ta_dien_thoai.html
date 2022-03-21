@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    class mobile{
+        constructor(Batery,memory1,memory2,memory3){
+            this.Batery = Batery;
+            this.memory1 = memory1;
+            this.memory2 = memory2;
+            this.memory3 = memory3;
+        }
+
+        infoPin(){
+
+            document.write('Pin : '+this.Batery+'<br>');
+        }
+
+        writeMess(){
+
+            document.write('nhap tin nhan ...<br>')
+
+            document.write(this.memory1+'<br>');
+
+        }
+
+        arriveMess(mess,from){
+            document.write('Tin nhan den tu: '+from+'<br>');
+            this.memory2 = mess;
+            document.write('Noi dung:'+mess+'<br>');
+        }
+
+        storeMess(mess,from){
+            document.write('tin nhan da luu...<br>');
+            this.memory1 = this.memory3;
+            document.write(mess+' '+from+'<br>')
+        }
+
+
+    }
+
+
+
+
+
+
+    let iphone =  new mobile();
+    let andoid = new mobile();
+
+    iphone.Batery = 100;
+
+
+    let messfromiphone = prompt('gui tin nhan den andoid');
+    let sendMessFromIphoneToAndroid = messfromiphone;
+    let messfromAnrdoid = prompt('gui tin nhan den iphone ');
+    let sendMessFromAndoidToIphone = messfromAnrdoid;
+
+
+    andoid.arriveMess(sendMessFromIphoneToAndroid,'iphone');
+    iphone.arriveMess(sendMessFromAndoidToIphone,'anroid');
+
+
+
+</script>
+</script>
+</body>
+</html>

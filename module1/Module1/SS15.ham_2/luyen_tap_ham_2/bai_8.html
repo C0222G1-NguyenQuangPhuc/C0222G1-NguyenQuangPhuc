@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    // Bài 8: Viết hàm truyền vào mảng số nguyên bất kỳ, sau đó đảo ngược mảng số nguyên đó.
+
+    function reverse(arg) {
+        let first = 0;
+        let last = arg.length - 1;
+        while (first < last){
+            let num = arg[first];
+            arg[first] = arg[last];
+            arg[last] = num;
+            first++;
+            last--;
+        }
+        return arg;
+    }
+
+    let arr = Array(5);
+    for (let i = 0; i < arr.length; i++) {
+        arr[i] = parseInt(prompt('Input number'));
+    }
+    document.write(arr + '<br>');
+    document.write(reverse(arr));
+
+</script>
+</body>
+</html>

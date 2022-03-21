@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    class Mobile{
+
+        constructor(battery, memory1, memory2, memory3) {
+            this.battery = battery;
+            this.memory1 = memory1;
+            this.memory2 = memory2;
+            this.memory3 = memory3;
+        }
+
+        statusBattery(){
+            if (this.battery > 5 && this.battery <20){
+                document.write('Pin yeu, can sac!')
+            }else if(this.battery >= 50){
+                document.write('Pin con day');
+            }else {
+                document.write('Het pin');
+            }
+        }
+
+        check(){
+
+        }
+
+        turnOnandOff(){
+            let n = parseInt(prompt('Nhap trang thai '));
+            if (n != 0){
+                document.write('Dien thoai da bat');
+            }else {
+                document.write('Dien thoai dang tat');
+            }
+        }
+
+        charge(){
+            for (let i = this.battery; i <= 100 ; i++) {
+                document.write('Dang sac' + i + '%' + '<br>');
+                setTimeout(3000);
+                if (i == 100){
+                    document.write('Pin day, vui long rut sac');
+                }
+            }
+        }
+
+        writeMessage(){
+            let mes = prompt('Nhap tin nhan');
+        }
+
+
+    }
+
+
+
+
+
+
+
+</script>
+
+
+
+
+</body>
+</html>

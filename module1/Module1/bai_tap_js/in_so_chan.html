@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let a = parseInt(prompt('Nhập 1 số'));
+    let tong = 0;
+    for(i = 1; i < a; i++){
+        if(a % i === 0){
+            tong += i;
+        }
+    }
+    if(tong === a){
+        console.log(a +'là số hoàn hảo');
+    }
+    else {
+        console.log(a +'không là số hoàn hảo');
+    }
+</script>
+</body>
+</html>

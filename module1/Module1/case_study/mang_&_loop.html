@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input type="submit" id="search" onclick="print()" value="Trans">
+<p id="output">Result</p>
+<script>
+    // Bài 1: Xây dựng mảng b là prefix sums của mảng a
+
+    // let a = [1,5,7,10,11];
+    // let b = [];
+    // let sum = 0;
+    // for (let i = 0; i < a.length ; i++) {
+    //     sum += a[i];
+    //     b.push(sum);
+    // }
+    // console.log(b);
+
+
+    // Bài 2: Cho 2 mảng A và B chứa số nguyên.
+    // Tìm ra một mảng đã được sắp xếp chứa các phần tử xuất hiện trong mảng B nhưng lại không xuất hiện A
+
+    // let  a =[7,2,5,3,5,3];
+    // let  b =[7,2,5,3,5,3,4,9];
+    // let missing = [] ;
+    // for (let i = 0; i < b.length ; i++) {
+    //     if (b[i] != a[i]){
+    //         missing.push(b[i]);
+    //     }
+    // }
+    // document.write(missing);
+
+
+    // Bài 3: Cho một danh sách các phân số, hãy tìm chỉ số của phân số lớn nhất (đếm từ 0)
+    // Giả định rằng không có các phân số bằng nhau trong tập đầu vào
+
+    // let numerators = [5, 2, 5];
+    // let denominators = [6, 3, 4];
+    // let b = [];
+    // for (let i = 0; i < numerators.length ; i++) {
+    //     b.push(numerators[i] / denominators[i]);
+    // }
+    // let max = b[0];
+    // let index;
+    // for (let j = 1; j < b.length ; j++) {
+    //     if (max < b[j]){
+    //         max = b[j];
+    //         index = j;
+    //     }
+    // }
+    // console.log(numerators[index] + '/' + denominators[index] +" vitri "+ index);
+
+    // Bài 4: Viết một chương trình nhập một số từ bàn phím và in ra màn hình bằng chữ.
+    //     Ví dụ 1234, kết quả in ra màn hình là một hai ba bốn.
+
+    let result = [];
+    function print() {
+        let str = prompt('Input numbers');
+        let arg = str.split('');
+        document.write(arg + '<br>');
+        let arr1 = [0,1,2,3,4,5,6,7,8,9];
+        let arr2 = ['Khong',"Mot",'Hai','Ba','Bon','Nam','Sau','Bay','Tam','Chin'];
+        let str1 ='';
+        for (let i = 0; i < arg.length ; i++) {
+            if (arr1.indexOf(parseInt(arg[i])) !== -1){
+                let temp = arr1.indexOf(parseInt(arg[i]));
+                str1 += arr2[temp];
+            }
+        }
+        document.write(str1);
+    }
+
+</script>
+</body>
+</html>

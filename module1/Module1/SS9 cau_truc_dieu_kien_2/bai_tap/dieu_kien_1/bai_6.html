@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <script>
+        // Tính hoa hồng nhận được tuỳ theo mức doanh số bán hàng
+
+
+        let soluong = parseInt(prompt('Nhập số lượng'));
+        let gia = parseInt(prompt('Nhập giá sản phẩm'));
+        let doanhthu = soluong * gia;
+        if(soluong > 50){
+            alert(doanhthu*5/100);
+            }else if(soluong < 50 && soluong >=30){
+                alert(doanhthu*3/100);
+        }else alert(doanhthu*2/100);
+    </script>
+</body>
+</html>

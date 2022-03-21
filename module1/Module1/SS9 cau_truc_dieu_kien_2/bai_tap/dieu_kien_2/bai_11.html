@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <script>
+    // Viết chương trình tính thuế thu nhập cá nhân.
+
+
+    let thuNhap = parseFloat(prompt('Nhập số tiền lương mỗi tháng (triệu đ)'));
+    let thuNhapChiuThue= thuNhap * 263/100;
+    if(thuNhapChiuThue >= 5 && thuNhap > 11){
+        alert('Thuế thu nhập phải nộp là: ' + thuNhapChiuThue * 5/100 + 'triệu đ ');
+        }else if(thuNhapChiuThue > 5 && thuNhapChiuThue <=10 && thuNhap > 11){
+            alert('Thuế thu nhập phải nộp là: ' + thuNhapChiuThue * 10/100 + 'triệu đ');
+        }else if(thuNhapChiuThue > 10 && thuNhapChiuThue <=18 && thuNhap > 11){
+            alert('Thuế thu nhập phải nộp là: ' + thuNhapChiuThue * 15/100 + 'triệu đ');
+        }else if(thuNhapChiuThue > 18 && thuNhapChiuThue <=32 && thuNhap > 11){
+            alert('Thuế thu nhập phải nộp là: ' + thuNhapChiuThue * 20/100 + 'triệu đ');
+        }else if(thuNhapChiuThue > 32 && thuNhapChiuThue <=52 && thuNhap > 11){
+            alert('Thuế thu nhập phải nộp là: ' + thuNhapChiuThue * 25/100 + 'triệu đ');
+        }else if(thuNhapChiuThue > 52 && thuNhapChiuThue <=80 && thuNhap > 11) {
+            alert('Thuế thu nhập phải nộp là: ' + thuNhapChiuThue * 30/100 + 'triệu đ');
+        }else if(thuNhapChiuThue > 80 && thuNhap > 11){
+            alert('Thuế thu nhập phải nộp là: ' + thuNhapChiuThue * 35/100 + 'triệu đ');
+        }
+    else {
+        alert('Bạn không cần phải nộp thuế thu nhập cá nhân');
+    }
+
+    </script>
+</body>
+</html>

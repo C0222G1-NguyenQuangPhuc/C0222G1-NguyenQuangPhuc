@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <script>
+
+     // let x,y;
+     //    for (y = 1; y <= 5; y++){
+     //        for (x = 1; x <= y; x++){
+     //            document.write(`*`);
+     //        }
+     //        document.write(`<br>`);
+     //    }
+
+
+
+    // let x,y;
+    // for (y = 5; y >= 1; y--){
+    //     for (x = 1; x <= y; x++){
+    //         document.write(`*`);
+    //     }
+    //     document.write(`<br>`);
+    // }
+
+
+     // let x,y,z;
+     // for (y = 1; y <= 5; y++){
+     //     for (x = 5; x >= y; x--){
+     //         document.write('&nbsp&nbsp');
+     //     }
+     //     for(z = 1;z <= y; z++){
+     //         document.write('*');
+     //     }
+     //     document.write(`<br>`);
+     // }
+
+
+     // let x,y,z;
+     // for (y = 1; y <= 5; y++){
+     //     for (x = 1; x <= y; x++){
+     //         document.write('&nbsp&nbsp');
+     //     }
+     //     for(z = 5;z >= y; z--){
+     //         document.write('*');
+     //     }
+     //     document.write(`<br>`);
+     // }
+
+
+
+
+     // In hình chữ nhật
+
+     // let x,y;
+     // for (x = 1; x <= 5; x++){
+     //     for(y = 1; y <=25; y++){
+     //         if (x === 1 || x === 5 || y === 1 || y === 25 ){
+     //             document.write('*');
+     //         }else document.write('&nbsp&nbsp')
+     //     }document.write('<br>')
+     // }
+
+
+
+     // in hình trái tim
+
+
+     let x,y;
+     for (x = 1; x < 7; x++){
+         for(y = 1; y <=7; y++){
+             if ((x === 1 && (y === 1 || y === 4 || y === 7 ))
+                 || (x === 4 && (y === 1 || y === 7))
+                 || (x === 5 && (y <= 2 || y >= 6))
+                 || (x === 6 && (y <= 3 || y >= 5)))
+             {
+                 document.write('&nbsp&nbsp');
+             }
+             else document.write('*')
+         }document.write('<br>')
+     }
+
+        
+    </script>
+</body>
+</html>

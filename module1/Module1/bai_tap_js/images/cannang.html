@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <div>
+        <span>nhap chieu cao</span>
+        <input type="text" id="heightinput">
+        <br>
+        <span>nhap can nang </span>
+        <input type="text" id="weightinput">
+
+        <button onclick="tinhBMI()">ket qua</button>
+        <script>
+
+            function tinhBMI() {
+                let bmi;
+                let height = parseFloat(document.getElementById("heightinput").value);
+                let weight= parseFloat(document.getElementById("weightinput").value);
+                bmi = weight / (height*height);
+                if (bmi <18)
+                {
+                    document.write("Under Weight");
+                }else if (bmi >= 18 && bmi <25){
+                    document.write("Normal");
+                }else  if (bmi >25 && bmi <= 30.0){
+                    document.write("Over Weight");
+                }else {
+                    document.write("obesity")
+                }
+            }
+
+        </script>
+    </div>
+</body>
+</html>

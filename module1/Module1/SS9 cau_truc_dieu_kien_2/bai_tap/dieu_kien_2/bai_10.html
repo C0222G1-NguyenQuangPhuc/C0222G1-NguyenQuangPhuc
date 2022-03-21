@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    // // Viết chương trình tính giá điện.
+
+
+    let chutien = parseFloat(prompt('Nhập số chữ điện tiêu thụ'));
+    switch (true) {
+        case chutien < 50:
+            alert('Số tiền phải trả là: ' + chutien*1678 + 'đ');
+            break;
+        case chutien < 100 && chutien >=51:
+            alert('Số tiền phải trả là: ' + chutien*1734 + 'đ');
+            break;
+        case chutien < 200 && chutien >=101 :
+            alert('Số tiền phải trả là: ' + chutien*2014 + 'đ');
+            break;
+        case chutien < 300 && chutien >=201:
+            alert('Số tiền phải trả là: ' + chutien*2536 + 'đ');
+            break;
+        case chutien < 400 && chutien >=301:
+            alert('Số tiền phải trả là: ' + chutien*2834 + 'đ');
+            break;
+        default:
+            alert('Số tiền phải trả là: ' + chutien*2927 + 'đ');
+    }
+</script>
+</body>
+</html>

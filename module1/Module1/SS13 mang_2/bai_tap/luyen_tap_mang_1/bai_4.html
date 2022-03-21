@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    // Viết chương trình khởi tạo/nhập vào một mảng số nguyên và đảo ngược các phần tử trong mảng đó.
+
+
+    let arr = new Array(5);
+    for (let i = 0; i < arr.length; i++){
+        arr[i] = parseInt(prompt('Input arr[' + i + ']:'));
+    }
+    console.log(arr);
+    let first = 0;
+    let last = arr.length - 1;
+    while(first < last){
+        let num = arr[first];
+        arr[first] = arr[last];
+        arr[last] = num;
+        first++;
+        last--;
+    }
+    console.log(arr);
+</script>
+</body>
+</html>

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h3>A demonstration of how to access a Number field</h3>
+
+<input type="text" id="myNumber" value="2">
+<input type="text" id="myNumber1" value="2">
+<input type="text" id="nhappheptooan" value="">
+
+<p>Click the button to get the number of the number field.</p>
+
+<button onclick="myFunction()">Try it</button>
+<button onclick="congSO()">phep cong</button>
+<button onclick="cong()">cong 2 chuoi</button>
+<button onclick="tinhtoan()">ket qua + - * /</button>
+
+<p id="demo"></p>
+<p id="demo1"></p>
+<p id="demo2"></p>
+<p id="demo3"></p>
+
+
+<script>
+
+
+    function myFunction() {
+        var x = document.getElementById("myNumber").value;
+        document.getElementById("demo").innerHTML = x;
+        var y = document.getElementById("myNumber1").value;
+        document.getElementById("demo1").innerHTML = y;
+    }
+
+    function cong(){
+        var x = document.getElementById("myNumber").value;
+        var y = document.getElementById("myNumber1").value;
+        var z = x +y;
+        document.getElementById("demo2").innerHTML = z;
+    }
+
+    function congSO(){
+        var x = parseInt(document.getElementById("myNumber").value);
+        var y = parseInt(document.getElementById("myNumber1").value);
+        var z  = x + y;
+        document.getElementById("demo2").innerHTML = z;
+    }
+
+    function tinhtoan(){
+        var x = parseInt(document.getElementById("myNumber").value);
+        var y = parseInt(document.getElementById("myNumber1").value);
+        var z;
+
+        var pheptoan = document.getElementById("nhappheptooan").value;
+
+
+        switch (pheptoan) {
+            case pheptoan = "+":
+                z = x+y;
+                break;
+            case pheptoan = "-":
+                z = x-y;
+                break;
+            case pheptoan = "*":
+                z= x*y;
+                break;
+            case pheptoan = "/":
+                z= x / y;
+                break;
+            default:
+                z= 'undefined'
+                break;
+        }
+
+        document.getElementById("demo3").innerHTML = z;
+    }
+</script>
+</body>
+</html>

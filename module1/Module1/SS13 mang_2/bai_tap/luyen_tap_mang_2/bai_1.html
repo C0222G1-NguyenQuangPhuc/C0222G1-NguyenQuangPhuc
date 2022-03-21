@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    // Viết chương trình khởi tạo mảng 2 chiều, gồm một bộ các phần tử có sẵn,  in ra các phần tử trong mảng.
+
+
+
+    // let a = [[3, 8, 2, 33], [9, 10, 4, 6], [0, 10, 9, 23], [5, 1, 44, 14], [8, 10, 21, 6]];
+    // a.forEach((item, index) => {
+    //     console.log(`row ${index}`)
+    //     for (let value of item){
+    //         console.log(value);
+    //     }
+    // })
+
+
+    let a = [[3, 8, 2, 33], [9, 10, 4, 6], [0, 10, 9, 23], [5, 1, 44, 14], [8, 10, 21, 6]];
+
+    for (let i in a)
+    {
+        console.log("row " + i);
+        for (let j in a[i])
+        {
+            console.log(" " + a[i][j]);
+        }
+    }
+</script>
+</body>
+</html>

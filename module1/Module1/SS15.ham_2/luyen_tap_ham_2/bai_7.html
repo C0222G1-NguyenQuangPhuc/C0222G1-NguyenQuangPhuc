@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    // Bài 7: Viết hàm truyền vào 2 số nguyên bất kì, thực hiện đổi chỗ hai số nguyên đó.
+
+    function change(a,b) {
+        let z = 0;
+        z = a;
+        a = b;
+        b = z;
+        return "trong ham: a= " +a + " ,b =" + b + '<br>';
+    }
+
+    let n1 = 5;
+    let n2 = 1;
+    document.write(change(n1,n2));
+    document.write("ngoai ham n1 = " + n1 + '<br>' + 'n2 = ' + n2);
+
+</script>
+</body>
+</html>

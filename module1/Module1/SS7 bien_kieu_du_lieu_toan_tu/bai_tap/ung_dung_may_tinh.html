@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+        <div>
+            <input type="number" id="nb1">
+            <input type="number" id="nb2">
+        </div>
+        <br>
+        <div>
+            <button onclick="phepcong()">Addition(+)</button>
+            <button onclick="pheptru()">Subtraction(-)</button>
+            <button onclick="phepnhan()">Multiplication(X)</button>
+            <button onclick="phepchia()">Division(/)</button>
+        </div>
+        <p id="result"></p>
+
+
+    <script>
+
+        function phepcong() {
+            let a = parseInt(document.getElementById("nb1").value);
+            let b = parseInt(document.getElementById("nb2").value);
+            c = a + b;
+            document.getElementById("result").innerHTML = c;
+        }
+
+        function pheptru() {
+            let a = parseInt(document.getElementById("nb1").value);
+            let b = parseInt(document.getElementById("nb2").value);
+            d = a - b;
+            document.getElementById("result").innerHTML = d;
+        }
+
+        function phepnhan() {
+            let a = parseInt(document.getElementById("nb1").value);
+            let b = parseInt(document.getElementById("nb2").value);
+            e = a * b;
+            document.getElementById("result").innerHTML = e;
+        }
+        function phepchia() {
+            let a = parseInt(document.getElementById("nb1").value);
+            let b = parseInt(document.getElementById("nb2").value);
+            f = a / b;
+            document.getElementById("result").innerHTML = f;
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<canvas id="myCanvas"></canvas>
+<script>
+    // function Rectangle(width, height) {
+    //     this.perameter = function () {
+    //         return (width + height) * 2;
+    //     }
+    //     this.area = function () {
+    //         return width*height;
+    //     }
+    // }
+    // let width = parseInt(prompt("Enter Width"));
+    // let height = parseInt(prompt("Enter eight"));
+    // let show = new Rectangle(width,height);
+    // document.write("dien tich"+show.area())+"<br>";
+    // document.write("chu vi"+show.perameter())+"<br>";
+    // let ctx = document.getElementById("myCanvas").getContext("2d");
+    // ctx.fillStyle = "#ff0000";
+    // ctx.fillRect(0,0,width,height);
+
+    class Rectangle {
+        constructor(width, height) {
+            this.width = width;
+            this.height = height;
+        }
+
+        perimeter() {
+            let perimeter = (this.width + this.height) * 2;
+            return ' Perimeter = ' + perimeter;
+        }
+
+        area() {
+            let area = this.width * this.height;
+            return ' Area = ' + area;
+        }
+
+        drawCanvas() {
+            let canvasObj =document.getElementById('myCanvas');
+            let page2d = canvasObj.getContext('2d');
+            page2d.rect(50,50,this.width,this.height);
+            page2d.stroke();
+            page2d.fillStyle = 'yellow';
+            page2d.fill();
+        }
+    }
+
+    let rectangle = new Rectangle(500, 300);
+
+    document.write(rectangle.area());
+    document.write(rectangle.perimeter());
+    rectangle.drawCanvas();
+</script>
+</body>
+</html>

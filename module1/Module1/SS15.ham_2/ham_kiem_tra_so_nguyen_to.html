@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function isPrimeNumber(n){
+        let check = true;
+        if (n < 2) {
+            check = false;
+        }
+        else if ( n === 2) {
+            check = true;
+        }
+        else if (n % 2 === 0) {
+            check = false;
+        }
+        else{
+            for(let i = 3; i <= Math.sqrt(n); i+=2) {
+                if (n % i === 0){
+                    check = false;
+                    break;
+                }
+            }
+        }
+        if(check){
+            document.write(n + ' is a prime number');
+        }else{
+            document.write(n +' is not a prime number');
+        }
+    }
+
+    let a = parseInt(prompt('Input a number'));
+    let b = isPrimeNumber(a);
+</script>
+</body>
+</html>
